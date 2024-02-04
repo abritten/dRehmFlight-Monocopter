@@ -1,5 +1,55 @@
 ![dRehmFlight Logo](https://github.com/nickrehm/dRehmFlight/blob/master/dRehmFlight%20Logo.png)
 
+## Project : dRehmFlight-Monocopter
+
+ This is a clone of the [Ball Drone Project MK II](https://hackaday.io/project/175512-the-ball-drone-project-mk-ii), using [DrehmFlight FC](https://github.com/nickrehm/dRehmFlight). Built and modified by [abritten](https://github.com/abritten) (Drew Britten).
+
+ **Naming Disclosure:** The original project is called the "Ball Drone Project MK II" or "Singlecopter", but I refer to it as the "Monocopter".
+ 
+ ### Monocopter sample 
+
+<img src="resources/images/monocopter1.jpeg" alt="monocopter1" width="400"/>
+<img src="https://cdn.hackaday.io/images/original/2122331603461213158.gif" alt="Ben's GIF" width="400"/>
+
+### DrehmFlight circuit
+
+<img src="resources/images/drehmflight1.jpeg" alt="drehmflight1" width="300"/>
+<img src="resources/images/drehmflight2.jpeg" alt="drehmflight2" width="300"/>
+<img src="resources/images/monocopter2.jpeg" alt="monocopter2" width="300"/>
+
+---
+
+### Youtube Samples
+
+| DrehmFlight version    | Non-DrehmFlight versions |
+| -------- | ------- |
+| [My string test](https://www.youtube.com/shorts/RvoSPb32Wrc)  | [Rotor Riot with Joshua Bardwell](https://www.youtube.com/watch?v=LGTTuYx5jpo)    |
+| [My indoor flight](https://www.youtube.com/watch?v=X98Xufc2pMU) | [Michael Bruckner](https://www.youtube.com/watch?v=ycUOa6GbaKA)     |
+|     | [Mr Drew](https://www.youtube.com/watch?v=2Pu-KDuxUwU)    |
+|     | [nicolalego](https://youtu.be/YdvwP_g6c2M?si=bGJN8odVR5owZeme)    |
+|     | [Chester DesVoigne](https://youtu.be/VlEyrpOMvgg?si=eFpwN7-trpfGSGQl)    |
+
+---
+
+### Hardware Sources
+
+[Hackaday build instructions](https://hackaday.io/project/175512-the-ball-drone-project-mk-ii)
+
+[Thingiverse Original STL files](https://www.thingiverse.com/thing:4635873)
+
+[Modified STL files if using SG90 servos](https://www.thingiverse.com/thing:4879274)
+
+
+
+### Summary Instructions: 
+Download STL files and follow Hackaday build instructions. Buy parts listed on Hackaday instructions or equivalent. Git clone this repo and follow the Drehmflight instructions below to learn about the code, and to and solder the DrehmFlight circuit. **Use the 1.3 Beta .ino file** and test your build. The .ino is already tuned to my build, so it should only need small tweaks to tune to your hardware or preferred style of flying. 
+
+DrehmFlight instructions below:
+
+---
+
+![dRehmFlight Logo](https://github.com/nickrehm/dRehmFlight/blob/master/dRehmFlight%20Logo.png)
+
 [Intro Video](https://www.youtube.com/watch?v=tlD0C5CrWcA&lc=Ugx6m02xjHk8QH19vd94AaABAg)
 
 [RcGroups Support Thread](https://www.rcgroups.com/forums/showthread.php?3706571-dRehmFlight-VTOL-Teensy-Flight-Controller-and-Stabilization)
