@@ -8,14 +8,11 @@
  
  ### Monocopter sample 
 
-<img src="resources/images/monocopter1.jpeg" alt="monocopter1" width="400"/>
-<img src="https://cdn.hackaday.io/images/original/2122331603461213158.gif" alt="Ben's GIF" width="400"/>
+<img src="resources/images/monocopter1.jpeg" alt="monocopter1" width="400"/><img src="https://cdn.hackaday.io/images/original/2122331603461213158.gif" alt="Ben's GIF" width="400"/>
 
 ### DrehmFlight circuit
 
-<img src="resources/images/drehmflight1.jpeg" alt="drehmflight1" width="300"/>
-<img src="resources/images/drehmflight2.jpeg" alt="drehmflight2" width="300"/>
-<img src="resources/images/monocopter2.jpeg" alt="monocopter2" width="300"/>
+<img src="resources/images/drehmflight1.jpeg" alt="drehmflight1" width="300"/><img src="resources/images/drehmflight2.jpeg" alt="drehmflight2" width="300"/><img src="resources/images/monocopter2.jpeg" alt="monocopter2" width="300"/>
 
 ---
 
