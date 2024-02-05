@@ -73,6 +73,7 @@ static const uint8_t num_DSM_channels = 6; //If using DSM RX, change this to mat
 #include <Wire.h>     //I2c communication
 #include <SPI.h>      //SPI communication
 #include <PWMServo.h> //Commanding any extra actuators, installed with teensyduino installer
+#include <FastLED.h>
 
 #if defined USE_SBUS_RX
 #include "src/SBUS/SBUS.h"   //sBus interface
@@ -179,12 +180,12 @@ float MagScaleZ = 1.0;
 
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 //IMU calibration parameters - calibrate IMU using calculate_IMU_error() in the void setup() to get these values, then comment out calculate_IMU_error()
-float AccErrorX = 0.03;
-float AccErrorY = -0.01;
-float AccErrorZ = 0.09;
-float GyroErrorX = -2.75;
-float GyroErrorY = 0.05;
-float GyroErrorZ = 5.09;
+float AccErrorX = 0.05;
+float AccErrorY = 0.01;
+float AccErrorZ = 0.08;
+float GyroErrorX = -2.85;
+float GyroErrorY = 0.12;
+float GyroErrorZ = 5.12;
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
@@ -232,6 +233,16 @@ const int ch4Pin = 20; //rudd
 const int ch5Pin = 21; //gear (throttle cut)
 const int ch6Pin = 22; //aux1 (free aux channel)
 const int PPM_Pin = 23;
+
+//LEDS
+#define NUM_LEDS 8
+const int LED_RED = 14; //PORT LED STRIP
+const int LED_GREEN = 15; //STBD LED STRIP
+const int LED_WHITE = 16; //STERN LED STRIP
+CRGB ledsRED[NUM_LEDS];
+CRGB ledsGREEN[NUM_LEDS];
+CRGB ledsWHITE[NUM_LEDS];
+
 //OneShot125 ESC pin outputs:
 const int m1Pin = 0;//main motor
 const int m2Pin = 1;
@@ -349,6 +360,21 @@ void setup() {
 
   //Set built in LED to turn on to signal startup
   digitalWrite(13, HIGH);
+
+  // LED strips are optional. WS2812B sample below:
+  FastLED.setMaxPowerInVoltsAndMilliamps(5, 150);
+  FastLED.addLeds<WS2812B, LED_RED, GRB>(ledsRED, NUM_LEDS);//PORT LED STRIP
+  FastLED.addLeds<WS2812B, LED_GREEN, GRB>(ledsGREEN, NUM_LEDS);//STBD LED STRIP
+  FastLED.addLeds<WS2812B, LED_WHITE, GRB>(ledsWHITE, NUM_LEDS);//STERN LED STRIP
+  FastLED.clear();
+  FastLED.show();
+  for (int i = 0; i < NUM_LEDS; i = i + 1) {
+    ledsRED[i] = CRGB::Red;//PORT LED STRIP
+    ledsGREEN[i] = CRGB::Green;//STBD LED STRIP
+    ledsWHITE[i] = CRGB::White;//STERN LED STRIP
+    FastLED.show();
+    delay(100);
+  }
 
   delay(5);
 
@@ -491,10 +517,10 @@ void controlMixer() {
 
 
   //USB at the STBD "BALL DRONE"
-  s1_command_scaled =  ELEVATOR1 - pitch_PID + yaw_PID;//RUDDER1
-  s2_command_scaled = ELEVATOR2 + pitch_PID + yaw_PID;//RUDDER2
-  s3_command_scaled = RUDDER1 - roll_PID + yaw_PID;//ELEVATOR2
-  s4_command_scaled = RUDDER2 + roll_PID + yaw_PID;//ELEVATOR2
+  s1_command_scaled =  ELEVATOR1 - roll_PID + yaw_PID;//RUDDER1
+  s2_command_scaled = ELEVATOR2 + roll_PID + yaw_PID;//RUDDER2
+  s3_command_scaled = RUDDER1 + pitch_PID + yaw_PID;//ELEVATOR2
+  s4_command_scaled = RUDDER2 - pitch_PID + yaw_PID;//ELEVATOR2
 }
 
 void armedStatus() {
