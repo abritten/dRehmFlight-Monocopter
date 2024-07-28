@@ -22,8 +22,8 @@
 | -------- | ------- |
 | [My string test](https://www.youtube.com/shorts/RvoSPb32Wrc)  | [Rotor Riot with Joshua Bardwell](https://www.youtube.com/watch?v=LGTTuYx5jpo)    |
 | [My indoor flight](https://www.youtube.com/watch?v=X98Xufc2pMU) | [Michael Bruckner](https://www.youtube.com/watch?v=ycUOa6GbaKA)     |
-|     | [Mr Drew](https://www.youtube.com/watch?v=2Pu-KDuxUwU)    |
-|     | [nicolalego](https://youtu.be/YdvwP_g6c2M?si=bGJN8odVR5owZeme)    |
+|   [Monocopter Full Video](https://youtu.be/pv3gyNKvTHI?si=vXj5GgywK_FWsJZ9)  | [Mr Drew](https://www.youtube.com/watch?v=2Pu-KDuxUwU)    |
+|  [Alfred Austria's Ball Drone](https://youtu.be/AbBe13lpiuc?si=cPXOc5AYXWArwoJH)   | [nicolalego](https://youtu.be/YdvwP_g6c2M?si=bGJN8odVR5owZeme)    |
 |     | [Chester DesVoigne](https://youtu.be/VlEyrpOMvgg?si=eFpwN7-trpfGSGQl)    |
 
 ---
